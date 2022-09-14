@@ -1,0 +1,129 @@
+
+:root {
+    --white-color: #FFFFFF;
+    --color-title-second: #303030;
+    --accent-color: #FF6C00;
+    --subtitle-color: rgba(157, 164, 189, 0.6);
+    --text-color: #9DA4BD;
+    --after-title-color: #555555;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+}
+
+.nav .menu {
+    list-style: none;
+    background-color: #37383A;
+}
+
+.nav .link {
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+}
+
+.nav .link:hover,
+.nav .link:focus {
+    color: var(--accent-color);
+}
+
+.number-tel{
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+}
+
+.number-tel:hover,
+.number-tel:focus {
+    color: var(--accent-color);
+}
+
+.number-tel,
+.online-booking {
+    background-color: #37383A;
+}
+
+.online-booking {
+    color: var(--white-color);
+    border: 1px solid #FF6C00;
+    border-radius: 25px;
+
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+}
+
+.online-booking:hover,
+.online-booking:focus {
+    background-color: var(--accent-color);
+}
+
+/* Hero */
+
+.hero .social-network {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+}
+
+.hero .social-network:hover,
+.hero .social-network:focus {
+    color: var(--color-title-second);
+}
+
+.subtitle {
+    text-transform: uppercase;
+    color: var(--subtitle-color);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+} 
+
+.hero .title {
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--color-title-second);
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1.18;
+    letter-spacing: 0.05em;
+}
+
+.hero .text {
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: 1.66;
+}
+
+.second-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+}
+
+.after-title {
+    color: var(--after-title-color);
+    font-size: 18px;
+    line-height: 1.66;
+}
+
+.text-about {
+    color: var(--after-title-color);
+    font-size: 14px;
+    line-height: 1.85;
+}
