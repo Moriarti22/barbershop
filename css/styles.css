@@ -182,17 +182,33 @@ body {
 
 .list .name {
     color: var(--color-title-second);
+    font-weight: 400;
     line-height: 1.39;
+    text-align: center;
 }
 
 .list .profession {
     color: var(--accent-color);
     font-size: 14px;
     line-height: var(--text-lh);
+    text-align: center;
 }
 
-.cuts .subtitle {
+.gallery .subtitle {
     color: var(--color-title-second);
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
 
 #contacts .second-title {
@@ -209,14 +225,7 @@ body {
     background-color: var(--color-title-second);
 }
 
-#contacts .input-booking {
-    color: var(--color-input);
-}
 
-#contacts .input-booking:hover::placeholder,
-#contacts .input-booking:focus::placeholder {
-    color: var(--white-color);
-}
 
 #contacts .contact-date {
     text-decoration: none;
