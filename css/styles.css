@@ -6,6 +6,10 @@
     --subtitle-color: rgba(157, 164, 189, 0.6);
     --text-color: #9DA4BD;
     --after-title-color: #555555;
+    --color-input: rgba(157, 164, 189, 0.4);
+
+    --text-lh: 1.36;
+    --link-lh: 1.33;
 }
 
 body {
@@ -24,7 +28,7 @@ body {
     color: var(--white-color);
     font-weight: 600;
     font-size: 12px;
-    line-height: 1.33;
+    line-height: var(--link-lh);
     letter-spacing: 0.1em;
 }
 
@@ -38,7 +42,7 @@ body {
     color: var(--white-color);
     font-weight: 600;
     font-size: 12px;
-    line-height: 1.33;
+    line-height: var(--link-lh);
     letter-spacing: 0.1em;
 }
 
@@ -56,11 +60,12 @@ body {
     color: var(--white-color);
     border: 1px solid #FF6C00;
     border-radius: 25px;
+    cursor: pointer;
 
     font-family: inherit;
     font-weight: 600;
     font-size: 12px;
-    line-height: 1.33;
+    line-height: var(--link-lh);
     letter-spacing: 0.09em;
 }
 
@@ -76,7 +81,7 @@ body {
     color: var(--accent-color);
     font-weight: 600;
     font-size: 11px;
-    line-height: 1.36;
+    line-height: var(--text-lh);
 }
 
 .hero .social-network:hover,
@@ -89,7 +94,7 @@ body {
     color: var(--subtitle-color);
     font-weight: 600;
     font-size: 11px;
-    line-height: 1.36;
+    line-height: var(--text-lh);
 } 
 
 .hero .title {
@@ -104,12 +109,12 @@ body {
 
 .hero .text {
     color: var(--text-color);
-    font-size: 18px;
     line-height: 1.66;
 }
 
 .second-title {
     font-family: 'Raleway', sans-serif;
+    color: var(--color-title-second);
     font-weight: 700;
     font-size: 42px;
     line-height: 1.16;
@@ -126,4 +131,113 @@ body {
     color: var(--after-title-color);
     font-size: 14px;
     line-height: 1.85;
+}
+
+#service-prices .subtitle {
+    color: var(--subtitle-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: var(--text-lh);
+}
+
+#service-prices .second-title {
+    background-color: var(--color-title-second);
+    color: var(--white-color);
+}
+
+#service-prices .list {
+    list-style: none;
+    background-color: var(--after-title-color);
+    color: var(--text-color);
+    line-height: 1.66;
+}
+
+.statistic .number {
+    color: var(--color-title-second);
+    font-weight: 700;
+    font-size: 42px;
+    line-height: var(--text-lh);
+    letter-spacing: 0.05em;
+}
+
+.statistic .text {
+    color: var(--color-title-second);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: var(--text-lh);
+
+}
+
+.statistic .list,
+#barbers .list {
+    list-style: none;
+}
+
+/* Section barbers */
+
+#barbers .subtitle {
+    color: var(--color-title-second);
+}
+
+.list .name {
+    color: var(--color-title-second);
+    line-height: 1.39;
+}
+
+.list .profession {
+    color: var(--accent-color);
+    font-size: 14px;
+    line-height: var(--text-lh);
+}
+
+.cuts .subtitle {
+    color: var(--color-title-second);
+}
+
+#contacts .second-title {
+    background-color: var(--color-title-second);
+    color: var(--white-color);
+}
+
+.input-booking::placeholder {
+    background-color: var(--color-title-second);
+    text-transform: uppercase;
+}
+
+#contacts .date-input {
+    background-color: var(--color-title-second);
+}
+
+#contacts .input-booking {
+    color: var(--color-input);
+}
+
+#contacts .input-booking:hover::placeholder,
+#contacts .input-booking:focus::placeholder {
+    color: var(--white-color);
+}
+
+#contacts .contact-date {
+    text-decoration: none;
+    font-style: normal;
+    background-color: var(--color-title-second);
+    color: var(--text-color);
+
+}
+
+#contacts .contact-date:hover,
+#contacts .contact-date:focus {
+    color: var(--white-color);
+}
+
+#contacts .subtitle {
+    background-color: var(--color-title-second);
+    color: var(--white-color);
+}
+
+#contacts .text {
+    background-color: var(--color-title-second);
+    color: var(--text-color);
+    line-height: 1.67
 }
