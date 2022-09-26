@@ -1,5 +1,6 @@
 
 :root {
+    --background-prices: #111319;
     --white-color: #FFFFFF;
     --color-title-second: #303030;
     --accent-color: #FF6C00;
@@ -18,13 +19,50 @@ body {
     letter-spacing: 0.02em;
 }
 
-.nav .menu {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+    margin: 0px;
+    padding: 0px;
+    padding-left: 0px;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
     list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.nav .menu {
     background-color: #37383A;
 }
 
 .nav .link {
-    text-decoration: none;
     color: var(--white-color);
     font-weight: 600;
     font-size: 12px;
@@ -38,7 +76,6 @@ body {
 }
 
 .number-tel{
-    text-decoration: none;
     color: var(--white-color);
     font-weight: 600;
     font-size: 12px;
@@ -60,13 +97,18 @@ body {
     color: var(--white-color);
     border: 1px solid #FF6C00;
     border-radius: 25px;
-    cursor: pointer;
 
     font-family: inherit;
     font-weight: 600;
     font-size: 12px;
     line-height: var(--link-lh);
     letter-spacing: 0.09em;
+
+    padding: 12px 24px;
+}
+
+.online-booking.booking {
+    padding: 12px 20px;
 }
 
 .online-booking:hover,
@@ -77,7 +119,6 @@ body {
 /* Hero */
 
 .hero .social-network {
-    text-decoration: none;
     color: var(--accent-color);
     font-weight: 600;
     font-size: 11px;
@@ -133,25 +174,67 @@ body {
     line-height: 1.85;
 }
 
+/* Section service-prices */
+
+#service-prices {
+    background-color: var(--background-prices);
+    background-image: url(/images/services-and-prices.png);
+    width: 1600px;
+    margin: 0 auto;
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
 #service-prices .subtitle {
     color: var(--subtitle-color);
     text-transform: uppercase;
     font-weight: 600;
     font-size: 11px;
     line-height: var(--text-lh);
+
+    margin-bottom: 20px;
 }
 
 #service-prices .second-title {
-    background-color: var(--color-title-second);
     color: var(--white-color);
+    margin-bottom: 44px;
+}
+
+#service-prices .item {
+    display: flex;
+    color: var(--text-color);
+    line-height: 1.66;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#service-prices .item + .item {
+    margin-top: 20px;
 }
 
 #service-prices .list {
-    list-style: none;
-    background-color: var(--after-title-color);
-    color: var(--text-color);
-    line-height: 1.66;
+    display: flex;
+    flex-direction: column;
+    width: 570px;
+
+    padding: 30px 20px;
 }
+
+#service-prices .price-container {
+    display: flex;
+    gap: 30px;
+
+    margin-bottom: 44px;
+}
+
+#service-prices .online-booking {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*  */
 
 .statistic .number {
     color: var(--color-title-second);
@@ -167,11 +250,6 @@ body {
     font-size: 11px;
     line-height: var(--text-lh);
 
-}
-
-.statistic .list,
-#barbers .list {
-    list-style: none;
 }
 
 /* Section barbers */
@@ -228,7 +306,6 @@ body {
 
 
 #contacts .contact-date {
-    text-decoration: none;
     font-style: normal;
     background-color: var(--color-title-second);
     color: var(--text-color);
