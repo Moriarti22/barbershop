@@ -12,7 +12,6 @@
     --background-gradient: rgba(25, 28, 38, 0.2);
     --color-title: #37383A;
 
-    --text-lh: 1.36;
     --link-lh: 1.33;
 }
 
@@ -52,6 +51,19 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
 
 .container {
@@ -180,7 +192,7 @@ footer {
     color: var(--accent-color);
     font-weight: 600;
     font-size: 11px;
-    line-height: var(--text-lh);
+    line-height: 1.36;
 }
 
 .hero .hero-rigth {
@@ -215,7 +227,7 @@ footer {
     color: var(--subtitle-color);
     font-weight: 600;
     font-size: 11px;
-    line-height: var(--text-lh);
+    line-height: 1.36;
     margin-bottom: 20px;
 } 
 
@@ -267,6 +279,7 @@ footer {
 
 #about .about-photo {
     display: flex;
+    width: 570px;
     gap: 30px;
 }
 
@@ -277,15 +290,9 @@ footer {
 }
 
 
-/* #about .title {
-    color: var(--color-title);
-    font-weight: 700;
-    font-size: 42px;
-    font-weight: 1.16;
-    letter-spacing: 0.05em;
-
-    margin-bottom: 20px;
-} */
+#about .subtitle {
+    color: var(--color-title-second);
+}
 
 #about .online-booking {
     min-width: 160px;
@@ -312,7 +319,7 @@ footer {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 11px;
-    line-height: var(--text-lh);
+    line-height: 1.36;
 
     margin-bottom: 20px;
 }
@@ -328,6 +335,18 @@ footer {
     line-height: 1.66;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+#service-prices .left {
+    background: linear-gradient(180deg,
+    #171A24 0%,
+    rgba(23, 26, 36, 0.2) 100%);
+}
+
+#service-prices .right {
+    background: linear-gradient(180deg,
+    #090B13 0%,
+    rgba(9, 11, 19, 0.2) 100%);
 }
 
 #service-prices .item + .item {
@@ -355,22 +374,88 @@ footer {
     margin-right: auto;
 }
 
-/*  */
+/* Section Statistic */
 
-.statistic .number {
-    color: var(--color-title-second);
-    font-weight: 700;
-    font-size: 42px;
-    line-height: var(--text-lh);
-    letter-spacing: 0.05em;
+.statistic {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.statistic .statistic-date {
+    display: flex;
+    width: 570px;
+}
+
+.statistic .statistic-rigth {
+    display: flex;
+    width: 570px;
+}
+
+.statistic-container {
+    display: flex;
+    gap: 30px;
+}
+
+.statistic .item {
+    background-color: var(--background-barbers);
+    width: 170px;
+    height: 133px;
+    text-align: center;
+    padding: 20px 24px;
+}
+
+.statistic .item:nth-child(even) {
+    margin-top: 30px;
+}
+
+.statistic .list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    padding-left: 100px;
+
 }
 
 .statistic .text {
     color: var(--color-title-second);
-    font-weight: 600;
     font-size: 11px;
-    line-height: var(--text-lh);
+    font-weight: 600;
+    line-height: 1.36;
+}
 
+.statistic .number {
+    position: relative;
+    color: var(--color-title-second);
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.36;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+.statistic .number::after {
+    position: absolute;
+    top: 0;
+    content: '+';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.37;
+    color: var(--accent-color);
+}
+
+.statistic .subtitle {
+    color: var(--color-title-second);
+}
+
+.statistic .second-title {
+    width: 430px;
+}
+
+.statistic .text-rigth {
+    color: var(--after-title-color);
+    width: 500px;
+    font-size: 18px;
+    line-height: 1.66;
 }
 
 /* Section barbers */
@@ -405,7 +490,7 @@ footer {
 #barbers .profession {
     color: var(--accent-color);
     font-size: 14px;
-    line-height: var(--text-lh);
+    line-height: 1.36;
 
     margin-bottom: 30px;
 }
@@ -448,6 +533,7 @@ footer {
 
 #barbers .list-box {
     display: block;
+    width: 370px;
     text-align: center;
 }
 
@@ -461,31 +547,49 @@ footer {
 
 /* Section Gallery */
 
+.gallery {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
 .gallery .subtitle {
     color: var(--color-title-second);
 }
 
+.gallery .gallery-img {
+    display: flex;
+    gap: 30px;
+}
+
+.gallery .subtitle {
+    margin-bottom: 44px;
+}
+
 /* Section contacts */
 
+#contacts {
+    background-color: var(--after-title-color);
+    padding-top: 130px;
+    padding-bottom: 120px;
+}
+
+
 #contacts .second-title {
-    background-color: var(--color-title-second);
     color: var(--white-color);
 }
 
 .input-booking::placeholder {
-    background-color: var(--color-title-second);
     text-transform: uppercase;
 }
 
 #contacts .date-input {
-    background-color: var(--color-title-second);
+
 }
 
 
 
 #contacts .contact-date {
     font-style: normal;
-    background-color: var(--color-title-second);
     color: var(--text-color);
 
 }
@@ -496,12 +600,10 @@ footer {
 }
 
 #contacts .subtitle {
-    background-color: var(--color-title-second);
     color: var(--white-color);
 }
 
 #contacts .text {
-    background-color: var(--color-title-second);
     color: var(--text-color);
     line-height: 1.67
 }
