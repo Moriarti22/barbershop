@@ -11,6 +11,7 @@
     --color-input: rgba(157, 164, 189, 0.4);
     --background-gradient: rgba(25, 28, 38, 0.2);
     --color-title: #37383A;
+    --backgroung-contacts: #191C26;
 
     --link-lh: 1.33;
 }
@@ -117,6 +118,7 @@ footer {
     letter-spacing: 0.1em;
     padding-top: 16px;
     padding-bottom: 16px;
+    transition: color 250ms linear;
 }
 
 .nav .link:hover,
@@ -135,6 +137,7 @@ footer {
     margin-right: 40px;
     padding-top: 16px;
     padding-bottom: 16px;
+    transition: color 250ms linear;
 }
 
 .number-tel:hover,
@@ -157,8 +160,8 @@ footer {
     font-size: 12px;
     line-height: var(--link-lh);
     letter-spacing: 0.09em;
-
     padding: 12px 24px;
+    transition: background-color 250ms linear;
 }
 
 .online-booking.booking {
@@ -188,12 +191,6 @@ footer {
     padding-right: 0px;
 }
 
-.hero .social-network {
-    color: var(--accent-color);
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-}
 
 .hero .hero-rigth {
     max-width: 444px;
@@ -202,13 +199,51 @@ footer {
     margin-left: 100px;
 }
 
+
 .hero .hero-social {
+    position: relative;
+    display: flex;
     width: 155px;
+    /* padding-top: 82px;
+    padding-bottom: 58px;
+    padding-left: 40px;
+    bottom: 0; */
+}
+
+
+.hero .social-network {
+    color: var(--color-title-second);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    transition: color 250ms linear;
 }
 
 .hero .social-network:hover,
 .hero .social-network:focus {
-    color: var(--color-title-second);
+    color: var(--accent-color);
+}
+
+.hero .social-network + .social-network {
+    margin-left: 40px;
+}
+
+.hero .thumb {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    align-items: center;
+    transform-origin: bottom left;
+    transform: rotate(270deg) translateY(-50%);
+}
+
+.hero .thumb::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: var(--color-title-second);
+    margin-right: 40px;
 }
 
 .hero .hero-slide {
@@ -223,13 +258,24 @@ footer {
 }
 
 .subtitle {
+    display: flex;
     text-transform: uppercase;
     color: var(--subtitle-color);
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
     margin-bottom: 20px;
-} 
+    align-items: center;
+}
+
+.subtitle::before {
+    display: flex;
+    content: '';
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+    background-color: currentColor;
+}
 
 .hero .second-title {
     font-family: 'Raleway', sans-serif;
@@ -519,6 +565,7 @@ footer {
     fill: var(--color-title-second);
     align-items: center;
     justify-content: center;
+    transition: fill 250ms linear;
 }
 
 #barbers .social-svg {
@@ -568,30 +615,53 @@ footer {
 /* Section contacts */
 
 #contacts {
-    background-color: var(--after-title-color);
+    background-color: var(--backgroung-contacts);
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 130px;
     padding-bottom: 120px;
 }
 
 
 #contacts .second-title {
+    display: block;
     color: var(--white-color);
+    margin-bottom: 40px;
 }
 
 .input-booking::placeholder {
     text-transform: uppercase;
 }
 
-#contacts .date-input {
-
+#contacts {
+    position: relative;
 }
 
-
+#contacts .background {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(../images/slaide-contacts.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
 
 #contacts .contact-date {
+    display: inline-block;
     font-style: normal;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
     color: var(--text-color);
+    transition: color 250ms linear;
+}
 
+.contact-date.contact-address {
+    font-weight: 700;
 }
 
 #contacts .contact-date:hover,
@@ -606,4 +676,26 @@ footer {
 #contacts .text {
     color: var(--text-color);
     line-height: 1.67
+}
+
+.container.container-contacts {
+    display: flex;
+}
+
+.bottom-booking {
+    width: 585px;
+}
+
+.right-contacts {
+    width: 585px;
+    padding-left: 100px;
+}
+
+.right-contacts .address {
+    width: 270px;
+    margin-bottom: 70px;
+}
+
+.right-contacts .contact-date + .contact-date {
+    margin-top: 20px;
 }
