@@ -145,15 +145,11 @@ footer {
     color: var(--accent-color);
 }
 
-.number-tel,
-.online-booking {
-    background-color: #37383A;
-}
-
 .online-booking {
     color: var(--white-color);
     border: 1px solid #FF6C00;
     border-radius: 25px;
+    background-color: transparent;
 
     font-family: inherit;
     font-weight: 600;
@@ -180,7 +176,6 @@ footer {
     font-size: 42px;
     line-height: 1.16;
     letter-spacing: 0.05em;
-
     margin-bottom: 20px;
 }   
 
@@ -340,10 +335,17 @@ footer {
     color: var(--color-title-second);
 }
 
-#about .online-booking {
+.online-booking.online-booking-about {
     min-width: 160px;
+    color: var(--color-title-second);
+    transition: color 250ms linear,
+    background-color 250ms linear;
 }
 
+#about .online-booking:hover,
+#about .online-booking:focus {
+    color: var(--white-color);
+}
 
 /* Section service-prices */
 
@@ -640,7 +642,7 @@ footer {
 
 #contacts .background {
     position: absolute;
-    left: 50%;
+    left: calc(50% + 15px);
     top: 0;
     bottom: 0;
     right: 0;
@@ -680,14 +682,46 @@ footer {
 
 .container.container-contacts {
     display: flex;
+    flex-basis: calc(100% / 2 - 30px);
+    gap: 30px;
 }
 
-.bottom-booking {
-    width: 585px;
+.online-form .online-item {
+    width: 270px;
+    padding-top: 8px;
+    color: var(--white-color);
+    padding-bottom: 8px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    transition: border-bottom 250ms linear;
+}
+
+.online-form .online-item::placeholder {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    color: var(--text-color);
+    transition: color 250ms linear;
+}
+
+.online-form .online-item + .online-item {
+    margin-left: 30px;
+}
+
+.online-form .online-item:hover,
+.online-form .online-item:focus {
+    border-bottom: 1px solid var(--white-color);
+}
+
+.online-form .online-item:hover::placeholder,
+.online-form .online-item:focus::placeholder {
+    color: var(--white-color);
 }
 
 .right-contacts {
-    width: 585px;
     padding-left: 100px;
 }
 
